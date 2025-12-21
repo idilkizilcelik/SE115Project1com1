@@ -112,7 +112,25 @@ public class Main {
         return bestday;
 
         }
+    public static String bestMonthForCommodity(String comm){
+        int cIndex = commodityIndex(comm);
+            if (cIndex == -1) { return "INVALID_COMMODITY";}
+            int bestsum= Integer.MIN_VALUE;
+            int bestmonth= 0;
+            for(int i= 0; i<12; i++){
+                int sum=0;
+                for(int j= 0; j<28 ; j++){
+                    sum+= profits[i][j][cIndex];
+                }
+                if(sum>bestsum){
+                    bestsum= sum;
+                    bestmonth=i;
+                }
+            }
+            )
+    {
 
+    }
 
 
     }
